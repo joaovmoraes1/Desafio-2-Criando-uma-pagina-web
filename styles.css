@@ -1,0 +1,210 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #2d3a4b;
+}
+
+.nav-links a {
+    margin-right: 15px;
+    color: #333;
+    font-size: 0.95em;
+    text-decoration: none;
+}
+
+.nav-links .dropdown-arrow {
+    font-size: 0.75em;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Estilização dos Ícones e Links no Header */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a {
+    color: #007bff; /* Azul claro uniforme para todos os links e ícones */
+    margin-left: 15px; /* Espaçamento entre os elementos */
+    font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a:hover {
+    color: #0056b3; /* Azul mais escuro para hover */
+}
+
+.header-icons .icon {
+    font-size: 1.1em;
+    color: #007bff; /* Azul claro para os ícones */
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+.header-icons .cart-count,
+.header-icons .wishlist-count {
+    color: #007bff; /* Azul claro para os contadores */
+    font-size: 0.85em;
+    margin-left: 5px; /* Espaçamento entre o ícone e o número */
+    font-weight: bold;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('./images/hero-bg.png') center/cover no-repeat, #d32f2f;
+    color: #fff;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-weight: bold;
+    padding: 0; /* Remove o fundo circular */
+    background: none; /* Remove o fundo */
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.progress-bar .progress {
+    width: 50%; /* Ajuste esta largura conforme necessário */
+    height: 100%;
+    background-color: #fff;
+}
+
+/* Sections */
+.sections {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.section {
+    background-color: #fff;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.section img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.section p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.section a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    font-size: 0.8em;
+    color: #666;
+}
