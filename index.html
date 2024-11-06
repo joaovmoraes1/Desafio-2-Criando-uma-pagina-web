@@ -1,73 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bandage - Groceries Delivery</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <h2 class="logo">Bandage</h2>
-        <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Shop <span class="dropdown-arrow">▾</span></a>
-            <a href="#">About</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-            <a href="#">Pages</a>
-        </nav>
-        <div class="header-icons">
-            <a href="#"><span class="icon">👤</span> Login / Register</a>
-            <a href="#"><span class="icon">🔍</span></a>
-            <a href="#"><span class="icon">🛒</span><span class="cart-count">1</span></a>
-            <a href="#"><span class="icon">❤️</span><span class="wishlist-count">1</span></a>
-        </div>
-    </header>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bandage - Groceries Delivery</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h2 class="logo">Bandage</h2>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Shop <span class="dropdown-arrow">▾</span></a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+                <a href="#">Pages</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#"><span class="icon">👤</span> Login / Register</a>
+                <a href="#"><span class="icon">🔍</span></a>
+                <a href="#"><span class="icon">🛒</span><span class="cart-count">1</span></a>
+                <a href="#"><span class="icon">❤️</span><span class="wishlist-count">1</span></a>
+            </div>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>GROCERIES DELIVERY</h1>
-            <p>We know how large objects will act, but things on a small scale just do not act that way.</p>
-            <button onclick="startNow()">Start Now</button>
-        </div>
-        <div class="slider-arrow left-arrow">‹</div>
-        <div class="slider-arrow right-arrow">›</div>
-        <div class="progress-bar">
-            <div class="progress"></div>
-        </div>
-    </section>
-    
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>GROCERIES DELIVERY</h1>
+                <p>We know how large objects will act, but things on a small scale just do not act that way.</p>
+                <button onclick="startNow()">Start Now</button>
+            </div>
+            <div class="slider-arrow left-arrow">‹</div>
+            <div class="slider-arrow right-arrow">›</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </section>
 
-    <!-- Additional Content -->
-    <section class="sections">
-        <div class="section">
-            <img src="https://via.placeholder.com/100" alt="Unique Life">
-            <h2>Unique Life</h2>
-            <p>Explore Items</p>
-            <a href="#">Explore Items</a>
+<!-- Nova Seção de Produtos -->
+<section class="product-section">
+    <div class="product-card">
+        <div class="product-info">
+            <p class="subtitle">Your Space</p>
+            <h3 class="title">Unique Life</h3>
+            <a href="#" class="explore-link">Explore Items</a>
         </div>
-        <div class="section">
-            <img src="https://via.placeholder.com/100" alt="Elements Style">
-            <h2>Elements Style</h2>
-            <p>Ends Today</p>
-            <a href="#">Explore Items</a>
+        <img src="/images/sorvete.png" alt="Caramel Ice Cream">
+    </div>
+    <div class="product-card">
+        <div class="product-info">
+            <p class="subtitle">Ends Today</p>
+            <h3 class="title">Elements Style</h3>
+            <a href="#" class="explore-link">Explore Items</a>
         </div>
-        <div class="section">
-            <img src="https://via.placeholder.com/100" alt="Elements Style">
-            <h2>Elements Style</h2>
-            <p>Ends Today</p>
-            <a href="#">Explore Items</a>
+        <img src="/images/maça.png" alt="Green Apples">
+    </div>
+    <div class="product-card">
+        <div class="product-info">
+            <p class="subtitle">Ends Today</p>
+            <h3 class="title">Elements Style</h3>
+            <a href="#" class="explore-link">Explore Items</a>
         </div>
-    </section>
+        <img src="/images/peru.png" alt="Ham">
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Bandage. All Rights Reserved.
-    </footer>
+        <!-- Product Layout Section -->
+        <div class="product-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h4>FURNITURE</h4>
+                <p>5 Items</p>
+                <img src="/images/image.png" alt="Furniture Image">
+            </aside>
 
-    <script src="scripts.js"></script>
-</body>
-</html>
+            
+
+            <!-- Product List -->
+            <section class="product-list">
+                <div class="product-categories-wrapper">
+                    <h2>Bestseller Products</h2>
+                    <div class="product-categories">
+                        <a href="#" class="active">Men</a>
+                        <a href="#">Women</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                    <div class="category-arrows">
+                        <div class="left-arrow">‹</div>
+                        <div class="right-arrow">›</div>
+                    </div>
+                </div>
+                <div class="products">
+                    <!-- Sample Product -->
+                    <div class="product-item">
+                        <img src="/images/sorvete.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="/images/maça.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="/images/peru.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="/images/sorvete.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="/images/maça.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="/images/peru.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+      
