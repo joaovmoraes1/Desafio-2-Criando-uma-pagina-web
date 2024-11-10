@@ -3,12 +3,32 @@ const slides = document.querySelectorAll('.slider img');
 const progressBar = document.querySelector('.progress-bar .progress');
 const productDisplayCount = 6; // Exibe 6 produtos de uma vez (3 na parte superior, 3 na parte inferior)
 
+
+
 // Atualiza a barra de progresso do carrossel
 function updateProgressBar() {
     if (!progressBar || slides.length === 0) return;
     const progress = ((currentSlide + 1) / slides.length) * 100;
     progressBar.style.width = progress + '%';
 }
+
+// Função para alternar o menu hambúrguer no mobile
+function toggleMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileNav) {
+        mobileNav.classList.toggle('active');
+    }
+}
+
+// Função para alternar o menu hambúrguer para o novo design
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu) {
+        menu.classList.toggle('active');
+    }
+}
+
+  
 
 // Mostra a slide atual
 function showSlide(index) {
@@ -32,6 +52,8 @@ function prevSlide() {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     showSlide(currentSlide);
 }
+
+
 
 // Exibe produtos em grupos de 6 (3 na parte superior, 3 na parte inferior) com animação
 function showProducts(products, startIndex, displayCount) {
@@ -96,7 +118,7 @@ function setupProductCarousel(sectionSelector) {
 }
 
 // Inicializa o carrossel automático do slide
-if (slides.length > 0) setInterval(nextSlide, 3000);
+if (slides.length > 0) setInterval(nextSlide, 5000); // Ajustado para maior tempo entre slides
 
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-now-button');
@@ -109,4 +131,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configura o carrossel de produtos para a seção principal
     setupProductCarousel('.product-list'); // Certifique-se de que este seletor corresponda ao contêiner correto
     setupProductCarousel('.additional-product-grid .product-listing'); // Exemplo para outra seção de produto
+});
+
+// Additional responsive JavaScript
+window.addEventListener('resize', () => {
+    const width = window.innerWidth;
+    const hero = document.querySelector('.hero');
+    if (width <= 768) {
+        hero.style.flexDirection = 'column';
+    } else {
+        hero.style.flexDirection = 'row';
+    }
 });
