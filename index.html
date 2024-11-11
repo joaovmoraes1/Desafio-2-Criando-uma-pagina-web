@@ -1,490 +1,529 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Updated Site</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <script src="scripts.js" defer></script>
-</head>
-<body>
-<!-- Header -->
-<header>
-    <h2 class="logo">Bandage</h2>
-    <nav class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Shop <span class="dropdown-arrow">▾</span></a>
-        <a href="#">About</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-        <a href="#">Pages</a>
-    </nav>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Groceries Delivery</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h2 class="logo">Bandage</h2>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Shop <span class="dropdown-arrow">▾</span></a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+                <a href="#">Pages</a>
+            </nav>
+            <div class="header-icons">
+                <!-- Login/Register -->
+                <a href="#" class="login-register">
+                    <img src="images/login.png" alt="User Icon" class="icon">
+                    
+                </a>
+            
+                <!-- Search -->
+                <a href="#"><img src="images/lupa.png" alt="Search Icon" class="icon"></a>
+            
+                <!-- Cart com contador -->
+                <a href="#">
+                    <img src="images/carrinho.png" alt="Cart Icon" class="icon">
+                 
+                </a>
+            
+                <!-- Wishlist com contador -->
+                <a href="#">
+                    <img src="images/coração.png" alt="Heart Icon" class="icon">
+              
+                </a>
+            </div>
+            
 
-    <div class="hamburger" onclick="toggleMobileMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+            <nav class="nav-links2">
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            
+                <nav class="mobile-menu" id="mobileMenu">
+                    <a href="#">Home</a>
+                    <a href="#">Product</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </nav>
 
-    <nav class="mobile-menu" id="mobileMenu">
-        <a href="#">Home</a>
-        <a href="#">Product</a>
-        <a href="#">Pricing</a>
-        <a href="#">Contact</a>
-    </nav>
+        </header>
 
-    <div class="header-icons">
-        <!-- Login/Register -->
-        <a href="#" class="icon login-register">
-            <img src="images/login.png" alt="User Icon">
-        </a>
-        <!-- Search -->
-        <a href="#"><img src="images/lupa.png" alt="Search Icon" class="icon"></a>
-        <!-- Cart com contador -->
-        <a href="#"><img src="images/carrinho.png" alt="Cart Icon" class="icon"></a>
-        <!-- Wishlist com contador -->
-        <a href="#"><img src="images/favorito.png" alt="Heart Icon" class="icon"></a>
-    </div>
-</header>
-
-<!-- Hero Section reordered for Mobile View -->
-<section class="hero">
-    <!-- Slider com imagens ajustado para o protótipo -->
-    <div class="slider">
-        <img src="images/hero-bg.png" alt="Slide 1" class="active">
-        <img src="images/hamburger.png" alt="Slide 2">
-        <img src="images/sushi.png" alt="Slide 3">
-    </div>
-    
-    
-    <!-- Conteúdo principal -->
-    <div class="hero-content">
-        <h1>GROCERIES DELIVERY</h1>
-        <p>We know how large objects will act, but things on a small scale just do not act that way.</p>
-        <button id="start-now-button" onclick="startNow()">Start Now</button>
-    </div>
-    
-    
-<!-- Setas de navegação -->
-<div class="slider-navigation">
-    <button class="nav-arrow left" onclick="prevSlide()">‹</button>
-    <button class="nav-arrow right" onclick="nextSlide()">›</button>
-</div>
+        <!-- Hero Section -->
+        <section class="hero">
 
 
+            <!-- Slider com imagens -->
+            <div class="slider">
+            <img src="images/hero-bg.png" alt="Slide 1" class="active">
+            <img src="images/hamburger.png" alt="Slide 2">
+            <img src="images/sushi.png" alt="Slide 3">
+            </div>
 
+            <div class="hero-content">
+                <h1>GROCERIES DELIVERY</h1>
+                <p>We know how large objects will act, but things on a small scale <span class="hide-on-mobile">just not that way</span>.</p>
+                <button id="start-now-button" onclick="startNow()">Start Now</button>
+            </div>
+  
+            <div class="slider-arrow left-arrow" onclick="prevSlide()">‹</div>
+            <div class="slider-arrow right-arrow" onclick="nextSlide()">›</div>
+            
+           
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </section>
 
-    <!-- Barra de progresso -->
-    <div class="progress-bar">
-        <div class="progress"></div>
-    </div>
-</section>
-
-<!-- Nova Seção de Produtos Ajustada ao Protótipo -->
+<!-- Nova Seção de Produtos -->
 <section class="product-section">
     <div class="product-card">
-        <img src="images/sorvete.png" alt="Caramel Ice Cream">
         <div class="product-info">
             <p class="subtitle">Your Space</p>
             <h3 class="title">Unique Life</h3>
             <a href="#" class="explore-link">Explore Items</a>
         </div>
+        <img src="./images/sorvete.png" alt="Caramel Icecream">
     </div>
     <div class="product-card">
-        <img src="images/maça.png" alt="Green Apples">
         <div class="product-info">
             <p class="subtitle">Ends Today</p>
             <h3 class="title">Elements Style</h3>
             <a href="#" class="explore-link">Explore Items</a>
         </div>
+        <img src="./images/maça.png" alt="Green Apples">
     </div>
     <div class="product-card">
-        <img src="images/peru.png" alt="Ham">
         <div class="product-info">
             <p class="subtitle">Ends Today</p>
             <h3 class="title">Elements Style</h3>
             <a href="#" class="explore-link">Explore Items</a>
         </div>
+        <img src="./images/peru.png" alt="Ham">
     </div>
 </section>
 
 <!-- Product Layout Section -->
-<div class="product-layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h4>FURNITURE</h4>
-        <p>5 Items</p>
-        <img src="images/image.png" alt="Furniture Image">
-    </aside>
+        <div class="product-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h4>FURNITURE</h4>
+                <p>5 Items</p>
+                <img src="./images/image.png" alt="Furniture Image">
+            </aside>
 
-    <!-- Product List -->
-    <section class="product-list">
-        <div class="product-categories-wrapper">
-            <h2>Bestseller Products</h2>
-            <div class="product-categories">
-                <a href="#" class="active">Men</a>
-                <a href="#">Women</a>
-                <a href="#">Accessories</a>
+            
+            <!-- Product List -->
+            <section class="product-list">
+                <div class="product-categories-wrapper1">
+                    <h2>BESTSELLER PRODUCTS</h2>
+                    <div class="product-categories">
+                        <a href="#" class="active">Men</a>
+                        <a href="#">Women</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                    <div class="category-arrows">
+                        <div class="left-arrow">‹</div>
+                        <div class="right-arrow">›</div>
+                    </div>
+                </div>
+
+                
+                <div class="products">
+                    <!-- Sample Product -->
+                    <div class="product-item">
+                        <img src="./images/sorvete.png" alt="Product image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./images/maça.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./images/peru.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./images/sorvete.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./images/maça.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./images/peru.png" alt="Product Image">
+                        <h3>Graphic Design</h3>
+                        <p>English Department</p>
+                        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- Most Popular Section -->
+        <section class="most-popular">
+            <div class="popular-left">
+                <img src="./images/homem.png" alt="Scooter Image">
             </div>
-            <div class="category-arrows">
-                <div class="left-arrow">‹</div>
-                <div class="right-arrow">›</div>
+            <div class="popular-right">
+                <div class="popular-product">
+                    <h2>Most Popular</h2>
+                    <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+                    <img src="./images/carne.png" alt="Product Image">
+                    <p>English Department</p>
+                  
+                    <div class="vendas">
+                    <img src="./images/Seta-Baixo.png" alt="Sales Numbers">
+                    <p class="num-vendas"><s>15 Sales</s></p>
+
+                    </div>
+                    <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                    <div class="color-dots2">
+                        <span class="dot2 dot2-1"></span>
+                        <span class="dot2 dot2-2"></span>
+                        <span class="dot2 dot2-3"></span>
+                        <span class="dot2 dot2-4"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="features-list">
+            <div class="feature">
+                <div class="feature-number">1.</div>
+                <div class="feature-content">
+                    <h3>Easy to use</h3>
+                    <p>Things on a very small that you have any direct.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-number">2.</div>
+                <div class="feature-content">
+                    <h3>Easy to use</h3>
+                    <p>Things on a very small that you have any direct.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-number">3.</div>
+                <div class="feature-content">
+                    <h3>Easy to use</h3>
+                    <p>Things on a very small that you have any direct.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-number">4.</div>
+                <div class="feature-content">
+                    <h3>Easy to use</h3>
+                    <p>Things on a very small that you have any direct.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Additional Product Grid with Sidebar -->
+    <section class="additional-product-grid">
+
+<!-- Sidebar with donut image on the right -->
+<aside class="product-sidebar2">
+    <h4>FURNITURE</h4>
+    <p>5 Items</p>
+    <img src="./images/donut.png" alt="Donut Image">
+</aside>
+
+        <!-- Product List on the left -->
+        <div class="product-listing">
+            <div class="product-categories-wrapper2">
+                <h2>BESTSELLER PRODUCTS</h2>
+                <div class="product-categories">
+                    <a href="#" class="active">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Accessories</a>
+                </div>
+                <div class="category-arrows">
+                    <div class="left-arrow">‹</div>
+                    <div class="right-arrow">›</div>
+                </div>
+            </div>
+            <div class="product-items-grid">
+                <div class="product-item">
+                    <img src="./images/sorvete.png" alt="Ice Cream">
+                    <h3>Graphic Design</h3>
+                    <p>English Department</p>
+                    <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                </div>
+                <div class="product-item">
+                    <img src="./images/maça.png" alt="Apples">
+                    <h3>Graphic Design</h3>
+                    <p>English Department</p>
+                    <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                </div>
+                <div class="product-item">
+                    <img src="./images/peru.png" alt="Ham">
+                    <h3>Graphic Design</h3>
+                    <p>English Department</p>
+                    <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                </div>
+                <div class="product-item">
+                    <img src="./images/sorvete.png" alt="Ice Cream">
+                    <h3>Graphic Design</h3>
+                    <p>English Department</p>
+                    <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                </div>
+                <div class="product-item">
+                    <img src="./images/maça.png" alt="Apples">
+                    <h3>Graphic Design</h3>
+                    <p>English Department</p>
+                    <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                </div>
+                <div class="product-item">
+                    <img src="./images/peru.png" alt="Ham">
+                    <h3>Graphic Design</h3>
+                    <p>English Department</p>
+                    <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+                </div>
             </div>
         </div>
-        <div class="products">
-            <!-- Sample Product -->
+
+        <!-- Sidebar with donut image on the right -->
+        <aside class="product-sidebar">
+            <h4>FURNITURE</h4>
+            <p>5 Items</p>
+            <img src="./images/donut.png" alt="Donut Image">
+        </aside>
+    </section>
+
+    <!-- New Most Popular Section -->
+    <section class="new-most-popular">
+        <!-- Left Product Details -->
+        <div class="product-details">
+            <h2>Most Popular</h2>
+            <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+            <div class="product-image1">
+                <img src="./images/caramelo.png" alt="Cashew Product">
+            </div>
+            <p class="product-description">English Department</p>
+            <p class="product-sales">15 Sales</p>
+            <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
+            <div class="color-dots">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+            </div>
+        </div>
+
+        <!-- Right Large Image -->
+        <div class="large-image">
+            <img src="./images/mulher.png" alt="Woman with Burger">
+        </div>
+    </section>
+
+    <!-- Bestseller Products Section -->
+    <section class="bestseller-products">
+        <div class="bestseller-header">
+            <h2>Bestseller Products</h2>
+            <div class="header-line"></div> <!-- Linha de divisão abaixo do título -->
+        </div>
+        <div class="product-grid">
             <div class="product-item">
-                <img src="images/sorvete.png" alt="Product Image">
+                <div class="product-image2">
+                    <img src="./images/azul.png" alt="Product 1">
+                </div>
                 <h3>Graphic Design</h3>
                 <p>English Department</p>
                 <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
             </div>
             <div class="product-item">
-                <img src="images/maça.png" alt="Product Image">
+                <div class="product-image2">
+                    <img src="./images/queijo.png" alt="Product 2">
+                </div>
                 <h3>Graphic Design</h3>
                 <p>English Department</p>
                 <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
             </div>
             <div class="product-item">
-                <img src="images/peru.png" alt="Product Image">
+                <div class="product-image2">
+                    <img src="./images/garrafa.png" alt="Product 3">
+                </div>
                 <h3>Graphic Design</h3>
                 <p>English Department</p>
                 <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
             </div>
             <div class="product-item">
-                <img src="images/sorvete.png" alt="Product Image">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-            <div class="product-item">
-                <img src="images/maça.png" alt="Product Image">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-            <div class="product-item">
-                <img src="images/peru.png" alt="Product Image">
+                <div class="product-image2">
+                    <img src="./images/candies.png" alt="Product 4">
+                </div>
                 <h3>Graphic Design</h3>
                 <p>English Department</p>
                 <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
             </div>
         </div>
     </section>
-</div>
+    
 
-<!-- Most Popular Section -->
-<section class="most-popular">
-    <div class="popular-left">
-        <img src="images/homem.png" alt="Scooter Image">
-    </div>
-    <div class="popular-right">
-        <h2>Most Popular</h2>
-        <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
-        <div class="popular-product">
-            <img src="images/carne.png" alt="Product Image">
-            <p>English Department</p>
-            <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-        </div>
-    </div>
-</section>
 
-<!-- Features Section -->
-<section class="features-list">
-    <div class="feature">
-        <h3>1. Easy to use</h3>
-        <p>Things on a very small that you have any direct.</p>
-    </div>
-    <div class="feature">
-        <h3>2. Easy to use</h3>
-        <p>Things on a very small that you have any direct.</p>
-    </div>
-    <div class="feature">
-        <h3>3. Easy to use</h3>
-        <p>Things on a very small that you have any direct.</p>
-    </div>
-    <div class="feature">
-        <h3>4. Easy to use</h3>
-        <p>Things on a very small that you have any direct.</p>
-    </div>
-</section>
 
-<!-- Additional Product Grid with Sidebar -->
-<section class="additional-product-grid">
-    <!-- Product List on the left -->
-    <div class="product-listing">
-        <div class="product-categories-wrapper">
-            <h2>Bestseller Products</h2>
-            <div class="product-categories">
-                <a href="#" class="active">Men</a>
-                <a href="#">Women</a>
-                <a href="#">Accessories</a>
-            </div>
-            <div class="category-arrows">
-                <div class="left-arrow">‹</div>
-                <div class="right-arrow">›</div>
-            </div>
-        </div>
-        <div class="product-items-grid">
-            <div class="product-item">
-                <img src="images/sorvete.png" alt="Ice Cream">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-            <div class="product-item">
-                <img src="images/maça.png" alt="Apples">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-            <div class="product-item">
-                <img src="images/peru.png" alt="Ham">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-            <div class="product-item">
-                <img src="images/sorvete.png" alt="Ice Cream">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-            <div class="product-item">
-                <img src="images/maça.png" alt="Apples">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-            <div class="product-item">
-                <img src="images/peru.png" alt="Ham">
-                <h3>Graphic Design</h3>
-                <p>English Department</p>
-                <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sidebar with donut image on the right -->
-    <aside class="product-sidebar">
-        <h4>FURNITURE</h4>
-        <p>5 Items</p>
-        <img src="images/donut.png" alt="Donut Image">
-    </aside>
-</section>
-
-<!-- New Most Popular Section -->
-<section class="new-most-popular">
-    <!-- Left Product Details -->
-    <div class="product-details">
-        <h2>Most Popular</h2>
-        <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
-        <div class="product-image">
-            <img src="images/caramelo.png" alt="Cashew Product">
-        </div>
-        <p class="product-description">English Department</p>
-        <p class="product-sales">15 Sales</p>
-        <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-        <div class="color-dots">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
-        </div>
-    </div>
-
-    <!-- Right Large Image -->
-    <div class="large-image">
-        <img src="images/mulher.png" alt="Woman with Burger">
-    </div>
-</section>
-
-<!-- Bestseller Products Section -->
-<section class="bestseller-products">
-    <h2>Bestseller Products</h2>
-
-    <div class="product-grid">
-        <div class="product-item">
-            <img src="images/azul.png" alt="Product 1">
-            <h3>Graphic Design</h3>
-            <p>English Department</p>
-            <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-        </div>
-        <div class="product-item">
-            <img src="images/queijo.png" alt="Product 2">
-            <h3>Graphic Design</h3>
-            <p>English Department</p>
-            <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-        </div>
-        <div class="product-item">
-            <img src="images/garrafa.png" alt="Product 3">
-            <h3>Graphic Design</h3>
-            <p>English Department</p>
-            <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-        </div>
-        <div class="product-item">
-            <img src="images/candies.png" alt="Product 4">
-            <h3>Graphic Design</h3>
-            <p>English Department</p>
-            <p class="price"><s>$16.48</s> <span class="discounted-price">$6.48</span></p>
-        </div>
-    </div>
-</section>
-
-<!-- Logos Section -->
-<section class="brand-logos">
-    <img src="images/hooli.png" alt="Hooli Logo">
-    <img src="images/lyA.png" alt="Lyft Logo">
-    <img src="images/chapeu.png" alt="Leaf Logo">
-    <img src="images/stripe.png" alt="Stripe Logo">
-    <img src="images/aws.png" alt="AWS Logo">
-    <img src="images/reddit.png" alt="Reddit Logo">
-</section>
+    <!-- Logos Section -->
+    <section class="brand-logos">
+        <img src="./images/hooli.png" alt="Hooli Logo">
+        <img src="./images/lyA.png" alt="Lyft Logo">
+        <img src="./images/chapeu.png" alt="Leaf Logo">
+        <img src="./images/stripe.png" alt="Stripe Logo">
+        <img src="./images/aws.png" alt="AWS Logo">
+        <img src="./images/reddit.png" alt="Reddit Logo">
+    </section>
 
 <!-- Featured Posts Section -->
 <section class="featured-posts">
-    <p class="section-subtitle">Practice Advice</p>
-    <h2>Featured Posts</h2>
     <div class="post-cards">
-        <!-- Post Card 1 -->
-        <div class="post-card">
-            <div class="post-image">
-                <img src="images/rua.png" alt="Colorful Houses">
-                <span class="badge">New</span>
-            </div>
-            <div class="post-content">
-                <div class="post-tags">
-                    <a href="#">Google</a>
-                    <a href="#">Trending</a>
-                    <a href="#">New</a>
-                </div>
-                <h3>Loudest à la Madison #1 (L'intégral)</h3>
-                <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
-                <div class="post-info">
-                    <span class="date">📅 22 April 2021</span>
-                    <span class="comments">💬 10 comments</span>
-                </div>
-                <a href="#" class="learn-more">Learn More →</a>
-            </div>
+      <!-- Post Card 1 -->
+      <div class="post-card">
+        <div class="post-image">
+          <img src="/images/rua.png" alt="Colorful houses">
+          <span class="badge">NEW</span>
         </div>
-
-        <!-- Post Card 2 -->
-        <div class="post-card">
-            <div class="post-image">
-                <img src="images/carro.png" alt="Pink Car">
-                <span class="badge">New</span>
-            </div>
-            <div class="post-content">
-                <div class="post-tags">
-                    <a href="#">Google</a>
-                    <a href="#">Trending</a>
-                    <a href="#">New</a>
-                </div>
-                <h3>Loudest à la Madison #1 (L'intégral)</h3>
-                <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
-                <div class="post-info">
-                    <span class="date">📅 22 April 2021</span>
-                    <span class="comments">💬 10 comments</span>
-                </div>
-                <a href="#" class="learn-more">Learn More →</a>
-            </div>
+        <div class="post-content">
+          <p class="post-tags"><a href="#">Google</a> Trending New</p>
+          <h3>Loudest à la Madison #1 (L'integral)</h3>
+          <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+          <div class="post-info">
+            <span>📅 22 April 2021</span>
+            <span>💬 10 comments</span>
+          </div>
+          <a href="#" class="learn-more">Learn More <span class="learn-more-arrow">→</span></a>
         </div>
-
-        <!-- Post Card 3 -->
-        <div class="post-card">
-            <div class="post-image">
-                <img src="images/sombinhas.png" alt="Colorful Umbrellas">
-                <span class="badge">New</span>
-            </div>
-            <div class="post-content">
-                <div class="post-tags">
-                    <a href="#">Google</a>
-                    <a href="#">Trending</a>
-                    <a href="#">New</a>
-                </div>
-                <h3>Loudest à la Madison #1 (L'intégral)</h3>
-                <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
-                <div class="post-info">
-                    <span class="date">📅 22 April 2021</span>
-                    <span class="comments">💬 10 comments</span>
-                </div>
-                <a href="#" class="learn-more">Learn More →</a>
-            </div>
+      </div>
+  
+      <!-- Post Card 2 -->
+      <div class="post-card">
+        <div class="post-image">
+          <img src="/images/carro.png" alt="Pink car">
+          <span class="badge">NEW</span>
         </div>
+        <div class="post-content">
+          <p class="post-tags"><a href="#">Google</a> Trending New</p>
+          <h3>Loudest à la Madison #1 (L'integral)</h3>
+          <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+          <div class="post-info">
+            <span>📅 22 April 2021</span>
+            <span>💬 10 comments</span>
+          </div>
+          <a href="#" class="learn-more">Learn More <span class="learn-more-arrow">→</span></a>
+        </div>
+      </div>
+  
+      <!-- Post Card 3 -->
+      <div class="post-card">
+        <div class="post-image">
+          <img src="/images/sombinhas.png" alt="Colorful umbrellas">
+          <span class="badge">NEW</span>
+        </div>
+        <div class="post-content">
+          <p class="post-tags"><a href="#">Google</a> Trending New</p>
+          <h3>Loudest à la Madison #1 (L'integral)</h3>
+          <p>We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+          <div class="post-info">
+            <span>📅 22 April 2021</span>
+            <span>💬 10 comments</span>
+          </div>
+          <a href="#" class="learn-more">Learn More <span class="learn-more-arrow">→</span></a>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-heading">
+                <h3>Consulting Agency For Your Business</h3>
+                <p>the quick fox jumps over the lazy dog</p>
+            </div>
+            <a href="#" class="contact-button">Contact Us</a>
+        </div>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-top">
-        <div class="footer-heading">
-            <h3>Consulting Agency For Your Business</h3>
-            <p>the quick fox jumps over the lazy dog</p>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Company Info</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Carrier</a></li>
+                    <li><a href="#">We are hiring</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Carrier</a></li>
+                    <li><a href="#">We are hiring</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#">Business Marketing</a></li>
+                    <li><a href="#">User Analytic</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">Unlimited Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">IOS & Android</a></li>
+                    <li><a href="#">Watch a Demo</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-column contact-info">
+                <h4>Get In Touch</h4>
+                <p>📞 (480) 555-0103</p>
+                <p>📍 4517 Washington Ave.</p>
+                <p>✉️ debra.holt@example.com</p>
+            </div>
         </div>
-        <a href="#" class="contact-button">Contact Us</a>
-    </div>
 
-    <div class="footer-content">
-        <div class="footer-column">
-            <h4>Company Info</h4>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Carrier</a></li>
-                <li><a href="#">We are hiring</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h4>Legal</h4>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Carrier</a></li>
-                <li><a href="#">We are hiring</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h4>Features</h4>
-            <ul>
-                <li><a href="#">Business Marketing</a></li>
-                <li><a href="#">User Analytic</a></li>
-                <li><a href="#">Live Chat</a></li>
-                <li><a href="#">Unlimited Support</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="#">IOS & Android</a></li>
-                <li><a href="#">Watch a Demo</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">API</a></li>
-            </ul>
-        </div>
-        <div class="footer-column contact-info">
-            <h4>Get In Touch</h4>
-            <p>📞 (480) 555-0103</p>
-            <p>📍 4517 Washington Ave.</p>
-            <p>✉️ debra.holt@example.com</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>Made With Love By Finland All Right Reserved</p>
-        <div class="social-icons">
-            <a href="#" class="social-icon facebook">
-                <img src="images/facebook.png" alt="Facebook" width="24" height="24">
-            </a>
-            <a href="#" class="social-icon instagram">
-                <img src="images/insta.png" alt="Instagram" width="24" height="24">
-            </a>
-            <a href="#" class="social-icon twitter">
-                <img src="images/twitter.png" alt="Twitter" width="24" height="24">
-            </a>
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+        <div class="footer-bottom">
+            <p>Made With Love By Finland All Right Reserved</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook">
+                    <img src="./images/facebook.png" alt="Facebook" width="24" height="24">
+                </a>
+                <a href="#" class="social-icon instagram">
+                    <img src="./images/insta.png" alt="Instagram" width="24" height="24">
+                </a>
+                <a href="#" class="social-icon twitter">
+                    <img src="./images/twitter.png" alt="Twitter" width="24" height="24">
+                </a>
+            </div>
+            
+    </body>
+    </html>

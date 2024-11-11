@@ -118,7 +118,7 @@ function setupProductCarousel(sectionSelector) {
 }
 
 // Inicializa o carrossel automático do slide
-if (slides.length > 0) setInterval(nextSlide, 5000); // Ajustado para maior tempo entre slides
+if (slides.length > 0) setInterval(nextSlide, 8000); // Ajustado para maior tempo entre slides
 
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-now-button');
